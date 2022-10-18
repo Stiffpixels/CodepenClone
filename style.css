@@ -1,0 +1,150 @@
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: sans-serif;
+  font-size: .875rem;
+}
+
+img{
+  width: 100%;
+}
+
+/* typography */
+
+.title{
+  margin: 0;
+  margin-bottom: .5em;
+}
+
+#title-ip{
+  background: transparent;
+  width: 4.8em;
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+  padding: 0;
+  font-weight: bolder;
+  color: white;
+}
+
+.title-icon::after{
+  content:'\f303';
+  font: var(--fa-font-solid);
+  margin-left: .5em;
+  font-size: .875rem;
+}
+
+.username{
+  margin: 0;
+}
+
+.menu-bar, .pin, .profile{
+  padding: .2em;
+}
+
+.menu-bar::after{
+  content: '\f0c9';
+  font: var(--fa-font-solid);
+  font-size: 1.5rem;
+}
+
+.pin::after{
+  content: '\f08d';
+  font: var(--fa-font-solid);
+  font-size: 1.5rem;
+}
+
+/* Layout */
+
+.codepen{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr 1fr auto;
+}
+
+.pen{
+  color: white;
+  background: black;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .5em 0;
+}
+
+.pen__menu>*{
+  margin-right:  .5em;
+}
+
+.icon{
+  float: left;
+  width: 12vmin;
+}
+
+.profile-pic{
+  width: 2em;
+}
+
+.code{
+  background: #1f1f1f;
+  
+}
+
+.button-container{
+  width: 100vw;
+  padding: .3em 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.button-design{
+  margin-left: .2em;
+  background: #494951;
+  color: white;
+  border: 0;
+  text-transform: uppercase;
+  padding: .5em;
+  font-size: 1rem;
+}
+
+.edit-name{
+  border: 0;
+  background: transparent;
+  color: white;
+}
+
+.button-design:hover{
+  background: #c4d0dd;
+}
+
+
+.console{
+  padding: .5em 0;
+  color: white;
+  background: #1f1f1f;
+}
+
+.active{
+  background: #9bc6d0;
+}
+
+#html-code, #css-code, #js-code{
+  overflow-y: scroll;
+  color: white;
+  background: #1f1f1f;
+  border: 0;
+  outline: 0;
+  margin-left: .2em;
+  display: none;
+}
+
+.result{
+  border-top: 1px solid black;
+}
