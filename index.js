@@ -9,6 +9,14 @@ const titleIp = document.querySelector("#title-ip");
 
 const textBoxes = document.querySelectorAll("textarea");
 
+const documentHeight= ()=>{
+  const doc = document.documentElement;
+  doc.style.setProperty("--doc-h", `${window.innerHeight}px`);
+  
+};
+window.addEventListener("resize",documentHeight);
+documentHeight();
+
 TBtns.forEach((btn)=>{
   btn.addEventListener("click", (e)=>{
     TBtns.forEach((bt)=>{
@@ -31,12 +39,8 @@ viewBtn.addEventListener("click", ()=>{
   titleIp.focus();
 });
 
-let count=1;
 textBoxes.forEach((textBox)=>{
   textBox.addEventListener("keydown",()=>{
-    if(count===1){
-      titleIp.setAttribute("disabled","true");
-      count++;
-    }
+    titleIp.setAttribute("disabled","true");
   });
 });

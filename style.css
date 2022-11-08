@@ -3,6 +3,23 @@
   box-sizing: border-box;
 }
 
+:root{
+  --doc-h:100%;
+}
+
+::-webkit-scrollbar{
+  width: 3%;
+}
+
+::-webkit-scrollbar-track{
+  background: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #494951;
+}
+
+
 body{
   margin: 0;
   font-family: sans-serif;
@@ -62,7 +79,9 @@ img{
 
 .codepen{
   width: 100%;
+  -webkit-height: 80vh;
   height: 100vh;
+  height: var(--doc-h);
   display: grid;
   grid-template-rows: auto 1fr 1fr auto;
 }
@@ -104,6 +123,11 @@ img{
   align-items: center;
 }
 
+.editor-container{
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
 .button-design{
   margin-left: .2em;
   background: #494951;
@@ -136,13 +160,13 @@ img{
 }
 
 #html-code, #css-code, #js-code{
-  overflow-y: scroll;
   color: white;
   background: #1f1f1f;
   border: 0;
   outline: 0;
   margin-left: .2em;
   display: none;
+  resize: none;
 }
 
 .result{
